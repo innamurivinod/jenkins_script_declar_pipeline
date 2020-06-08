@@ -4,20 +4,20 @@ agent any
 
 stages{
 
-stage("building"){
+	stage("building"){
 
-steps{
-echo 'step1:building war'
-}
+	steps{
+	echo 'building the code '
+	sh 'mvn package'
+	}
 
-}
+	}
 stage("testing"){
 
-steps{
-echo 'testing step1'
-}
-
-}
+	steps{
+	echo 'testing step1'
+	}
+  }
 
 }
 
